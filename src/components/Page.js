@@ -8,16 +8,18 @@ import { useParams,useNavigate } from "react-router-dom";
 
 const Page = () => {
 
-const {id1} = useParams();
-const id = id1===undefined?1:id1
-console.log(id)
+
+const {id} = useParams();
+// console.log(id1,useParams())
+const id1 = id===undefined?1:id
+console.log(id1)
 const navigate = useNavigate()
 
 const handlePage = (value) => {
       navigate('/'+value)
     }
 
-const dataRange = tweetData.slice((id-1)*10,id*10)
+const dataRange = tweetData.slice((id1-1)*10,id1*10)
 
 const [likes,setLikes] = useState([])
 
