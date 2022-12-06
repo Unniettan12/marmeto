@@ -8,7 +8,8 @@ import { useParams,useNavigate } from "react-router-dom";
 
 const Page = () => {
 
-const {id} = useParams();
+const {id1} = useParams();
+const id = id1===undefined?1:id1
 console.log(id)
 const navigate = useNavigate()
 
