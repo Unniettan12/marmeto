@@ -4,6 +4,8 @@ import { useState } from "react";
 import PageNav from "./PageNav";
 import { useParams,useNavigate } from "react-router-dom";
 
+import calcRange from "./calcRange";
+
 
 
 const Page = () => {
@@ -11,9 +13,18 @@ const Page = () => {
 
 const {id} = useParams();
 // console.log(id1,useParams())
-const id1 = id===undefined?1:id
+var id1 = id===undefined?1:id
 console.log(id1)
+
 const navigate = useNavigate()
+
+
+const numOfPag = calcRange()
+console.log(numOfPag)
+if(id1>numOfPag.length)
+    {navigate('/1')
+        id1=1}
+
 
 const handlePage = (value) => {
       navigate('/'+value)
