@@ -61,7 +61,7 @@ const Tweet = ({tweetData,likes,setLikes}) => {
                 <div className="profName max-w-[30%] truncate">
                     <b>{tweetData.profileName} </b>
                 </div>
-                <div className="md:pl-2 text-white/50 text-sm md:text-md max-w-[30%] truncate ">
+                <div className="pl-1 md:pl-2 text-white/50 text-sm md:text-md max-w-[30%] truncate ">
                     @{tweetData.handle}
                 
                 </div>
