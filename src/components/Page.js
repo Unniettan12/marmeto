@@ -35,7 +35,7 @@ const [likes,setLikes] = useState([])
       })
     }
 
-        <PageNav handlePage = {handlePage} />
+        <PageNav handlePage = {handlePage} id = {id1} />
         </div>
     )
 
